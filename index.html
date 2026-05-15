@@ -3,70 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Resume</title>
+    <title>Erik Gonzalez | Resume</title>
+
+    <!-- Google Fonts: Oswald (headings) + Raleway (body) -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- HW8: FontAwesome for footer icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- External stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- // Intro -->
-    <header>
-        <img src="your-picture.jpg" alt="Your Name">
-        <h1>Your Name</h1>
-        <h2>Job title or tagline</h2>
-        <p>Add your profile summary here. You can have several paragraphs or add links.</p>
-    </header>
-    
-    <main> 
-        <!-- // Work Experience -->
-        <section>
-            <h2>Work Experience</h2>
 
-            <!-- Job Details: copy this whole block to add more jobs -->
-            <h3>Job title</h3>
-            <p>Company Name</p>
-            <p>Date at job</p>
-            
-            <!-- Add as many paragraphs as you need. -->
-            <p>Job summary.</p>
-            
-            <!-- This list can be deleted if you don't want to use it. -->
-            <p>Optional list:</p>
-            <ul>
-                <li>Created...</li>
-                <li>Lead...</li>
-                <li>Responsible for</li>
-            </ul>
-            <!-- end of Job Details block. -->
-            
-        </section>
+    <!-- HW8: Sticky navigation menu (no list) — links to each resume section.
+         Position: sticky keeps it at the top as the user scrolls. -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#work">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+        <!-- HW8: Download link for PDF version of resume -->
+        <a href="resume.pdf" download class="nav-download">
+            <i class="fas fa-file-pdf"></i> Resume PDF
+        </a>
+    </nav>
 
-
-        <!-- // Education -->
-        <section>
-            <h2>Education</h2>
-
-            <!-- School details: copy this whole block to add more schools. -->
-            <h3>School name, year you attended</h3>
-            <p>Designation received</p>
-            
-            <!-- Add as many paragraphs as you need. -->
-            <p>Summary.</p>
-            <!-- End of school details. -->
-        </section>
-    </main>
-    
-    <!-- // Footer & contact info -->
-    <footer>
-        <h2>Let's Keep in Touch!</h2>
-        
-        <!-- Social media and contact links. Add or remove any networks. -->
-        <div>
-            <a href="mailto:email@example.com">email@example.com</a>
-            <a href="http://yourwebsite.com" target="_blank">yourwebsite.com</a>
-            <a href="#" target="_blank">Twitter</a>
-            <a href="#" target="_blank">LinkedIn</a>
-            <a href="#" target="_blank">Facebook</a>
+    <!-- Intro / Header -->
+    <!-- HW8: id="about" lets the nav link scroll here -->
+    <header id="about">
+        <div class="content-wrap">
+            <img src="images/dwight.jpeg" alt="Erik Gonzalez" class="profile-img column-narrow">
+            <div class="column-wide">
+                <h1>Erik Gonzalez</h1>
+                <h2>Computer Science Student &amp; Web Developer</h2>
+                <p>Passionate computer science student at California State University, Northridge
+                   with hands-on experience in web development and IT support. Enthusiastic about
+                   building fast, accessible, and interactive web applications.</p>
+            </div>
         </div>
+    </header>
 
-        <p>Copyright 2017 by Your Name</p>
+    <main>
+
+        <!-- Work Experience -->
+        <section class="work-experience" id="work">
+            <div class="content-wrap">
+                <h2>Work Experience</h2>
+
+                <!-- Job 1 -->
+                <div class="column-narrow">
+                    <h3>Web Development Intern</h3>
+                    <p>Tech Solutions Inc.</p>
+                    <p>June 2022 &ndash; August 2022</p>
+                </div>
+                <div class="column-wide">
+                    <p>Assisted in developing and maintaining client-facing web applications
+                       using HTML, CSS, and JavaScript.</p>
+                    <p>Key contributions:</p>
+                    <ul>
+                        <li>Built responsive landing pages with CSS Flexbox and Grid</li>
+                        <li>Integrated the Google Maps JavaScript API into a location-based feature</li>
+                        <li>Collaborated with the design team to improve UX on mobile devices</li>
+                    </ul>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="column-narrow">
+                    <h3>IT Help Desk Technician</h3>
+                    <p>CSUN Information Technology</p>
+                    <p>January 2021 &ndash; May 2022</p>
+                </div>
+                <div class="column-wide">
+                    <p>Provided technical support to students and faculty for hardware,
+                       software, and network issues across campus.</p>
+                    <p>Key contributions:</p>
+                    <ul>
+                        <li>Resolved an average of 30+ support tickets per week</li>
+                        <li>Configured and deployed lab computers across multiple campus buildings</li>
+                        <li>Created documentation that reduced repeat tickets by 20%</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="education" id="education">
+            <div class="content-wrap">
+                <h2>Education</h2>
+
+                <h3>California State University, Northridge &mdash; 2020&ndash;2024</h3>
+                <p>Bachelor of Science in Computer Science</p>
+                <p>Relevant coursework: Web Development, Data Structures, Algorithms,
+                   Database Management, and Human-Computer Interaction.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer & Contact Info -->
+    <footer id="contact">
+        <div class="content-wrap">
+            <h2>Let's Keep in Touch!</h2>
+
+            <!-- HW8: FontAwesome icons added to each contact link -->
+            <div class="contact-info">
+                <a href="mailto:erikgonzalez0196@gmail.com">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+                <a href="#" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="#" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="resume.pdf" download>
+                    <i class="fas fa-file-pdf"></i> Resume PDF
+                </a>
+            </div>
+
+            <p>Copyright 2024 by Erik Gonzalez</p>
+        </div>
     </footer>
+
 </body>
 </html>

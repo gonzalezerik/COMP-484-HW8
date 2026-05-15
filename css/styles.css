@@ -1,0 +1,190 @@
+/* Color Palette
+# color 1: #1e2533  — dark blue-gray   (header background)
+# color 2: #0f3460  — deep navy blue   (work experience background)
+# color 3: #f0f2f5  — light gray       (education background)
+# color 4: #16213e  — dark navy        (footer + nav background)
+*/
+
+/* Global styles — box model fix
+------------------------------------*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0;
+}
+
+h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+
+/* HW8: Navigation — no list, sticky at top of viewport
+------------------------------------*/
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #16213e;
+    z-index: 100;
+    text-align: right;
+    padding: 15px 40px;
+}
+
+nav a {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ccc;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #a0c4ff;
+}
+
+/* HW8: highlight the download link in the nav */
+nav a.nav-download {
+    color: #a0c4ff;
+    border: 1px solid #a0c4ff;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+
+nav a.nav-download:hover {
+    background-color: #a0c4ff;
+    color: #16213e;
+}
+
+
+/* Content wrapper
+------------------------------------*/
+.content-wrap {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 50px;
+    overflow: hidden;
+}
+
+
+/* Column layout
+------------------------------------*/
+.column-narrow {
+    width: 30%;
+    float: left;
+    padding-right: 3%;
+    min-height: 175px;
+}
+
+.column-wide {
+    width: 70%;
+    float: left;
+    min-height: 225px;
+}
+
+
+/* Header & Footer
+------------------------------------*/
+
+/* HW8: background image with RGBA gradient overlay for transparency effect.
+   The linear-gradient uses rgba() colors so the image shows through subtly
+   while keeping text legible. The gradient goes from a darker top to a
+   slightly lighter bottom to draw attention to the profile content. */
+header {
+    background-image:
+        linear-gradient(
+            rgba(30, 37, 51, 0.90),
+            rgba(15, 52, 96, 0.85)
+        ),
+        url('../images/dwight.jpeg');
+    background-size: cover;
+    background-position: center top;
+    color: #fff;
+}
+
+header h1 {
+    color: #e2d9f3;
+    margin: 0;
+}
+
+header h2 {
+    color: #a0c4ff;
+    margin: 0;
+}
+
+.profile-img {
+    border-radius: 50%;
+}
+
+footer {
+    background-color: #16213e;
+    color: #ccc;
+    text-align: center;
+}
+
+footer a {
+    color: #a0c4ff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* HW8: FontAwesome icons sit to the left of the link text automatically.
+   inline-block + padding gives each link enough breathing room. */
+.contact-info a {
+    padding: 10px;
+    display: inline-block;
+}
+
+.contact-info i {
+    margin-right: 5px;
+}
+
+
+/* Work Experience
+------------------------------------*/
+.work-experience {
+    background-color: #0f3460;
+    color: #fff;
+}
+
+.work-experience h2,
+.work-experience h3 {
+    color: #e2d9f3;
+}
+
+
+/* Education
+------------------------------------*/
+.education {
+    background-color: #f0f2f5;
+    color: #333;
+}
